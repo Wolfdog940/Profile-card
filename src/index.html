@@ -88,12 +88,13 @@
         </select>
       </li>
       <li>
-        <label>profile</label>
+        <label>avatar</label>
 
         <input
-          type="file"
-          id="url_imagen"
-          onchange="document.getElementsByClassName('photo').src=this.value;"
+          type="url"
+          placeholder="Introduce url"
+          for="avatarURL"
+          class="picker"
         />
       </li>
     </ul>
