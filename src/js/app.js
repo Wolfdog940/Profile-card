@@ -43,6 +43,9 @@ function render(variables = {}) {
   if (variables.linkedin == null) variables.linkedin = " ";
   if (variables.instagram == null) variables.instagram = " ";
 
+  variables.avatarURL = document.querySelector(".input-foto").value
+    ? document.querySelector(".input-foto").value
+    : variables.avatarURL;
   // reset the website body with the new html output
   document.querySelector("#widget_content").innerHTML = `<div class="widget">
             ${cover}
