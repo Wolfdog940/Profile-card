@@ -31,17 +31,20 @@ function render(variables = {}) {
   if (variables.includeCover == false) cover = "<div class='cover'></div>";
 
   // Name and Last name
-  if (variables.name == null) variables.name = "Name";
-  if (variables.lastname == null) variables.lastname = "LastName";
 
-  if (variables.country == null) variables.country = "country";
-  if (variables.city == null) variables.city = "city";
-  if (variables.role == null) variables.role = "role";
+  variables.name = variables.name == null ? "Name" : variables.name;
 
-  if (variables.twitter == null) variables.twitter = " ";
-  if (variables.github == null) variables.github = " ";
-  if (variables.linkedin == null) variables.linkedin = " ";
-  if (variables.instagram == null) variables.instagram = " ";
+  variables.lastname =
+    variables.lastname == null ? "LastName" : variables.lastname;
+
+  variables.country = variables.country == null ? "country" : variables.country;
+  variables.city = variables.city == null ? "city" : variables.city;
+  variables.role = variables.role == null ? "role" : variables.role;
+
+  variables.twitter = variables.twitter == null ? " " : variables.twitter;
+  variables.github = variables.github == null ? " " : variables.github;
+  variables.linkedin = variables.linkedin == null ? " " : variables.linkedin;
+  variables.instagram = variables.instagram == null ? " " : variables.instagram;
 
   variables.avatarURL = document.querySelector(".input-foto").value
     ? document.querySelector(".input-foto").value
